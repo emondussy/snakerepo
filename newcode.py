@@ -8,6 +8,7 @@
                     pretty_print(f"Error saving configfile: {e}" + str(e), 
                                  "error", "sys0")
                     pretty_print("Config won't be carried to the next version",
+                        
                                  "warning", "sys0")
 
                 if not os.path.exists(Settings.TEMP_FOLDER): # Make the Temp folder
@@ -24,3 +25,8 @@
                                 if running_script:
                                     done = int(12.5 * dl / file_size)
                                     dl_perc = str(int(22.5 * dl / file_size))
+  if discord_presence == "y":
+        try:
+            init_rich_presence()
+        except Exception as e:
+            debug_output(f'Error launching Discord RPC thread: {e}')
