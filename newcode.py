@@ -10,7 +10,7 @@
                     pretty_print("Config won't be carried to the next version",
                         
                                  "warning", "sys0")
-
+#hello yes
                 if not os.path.exists(Settings.TEMP_FOLDER): # Make the Temp folder
                     os.makedirs(Settings.TEMP_FOLDER) 
 
